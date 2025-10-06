@@ -116,3 +116,6 @@ Desktop.ini
 # Other
 *.pyo
 *.pyd
+
+# Project artifacts
+artifacts/
