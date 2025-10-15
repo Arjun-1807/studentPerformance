@@ -15,7 +15,7 @@ from src.logger import logging
 from src.utils import save_object
 
 class DataTransformationConfig:
-    preprocessror_obj_file_path = os.path.join('artifacts', 'preprocessor.pkl')
+    preprocessor_obj_file_path = os.path.join('artifacts', 'preprocessor.pkl')
     
 class DataTransformation:
     def __init__(self):
@@ -31,7 +31,7 @@ class DataTransformation:
             numerical_columns = ['writing_score', 'reading_score']
             categorical_columns = [
                 'gender',
-                'rece_ethnicity',
+                'race_ethnicity',
                 'parental_level_of_education',
                 'lunch',
                 'test_preparation_course'
@@ -39,7 +39,7 @@ class DataTransformation:
             
             num_pipline = Pipeline(
                 steps=[
-                    ('imputer', SimpleImputer(startegy='median')),
+                    ('imputer', SimpleImputer(strategy='median')),
                     ('scaler', StandardScaler())
                 ]
             )
