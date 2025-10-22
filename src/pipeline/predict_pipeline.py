@@ -1,6 +1,8 @@
 
 import sys
-import os
+import osoption_settings:
+  "aws:elasticbeanstalk:container:python":
+    WSGIPath: application:application
 import pandas as pd
 import numpy as np
 
